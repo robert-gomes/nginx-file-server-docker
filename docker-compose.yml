@@ -1,0 +1,10 @@
+nginx:
+  image: nginx:latest
+  container_name: ngfs01
+  ports:
+    - "9080:80"
+  volumes:
+    - ./config:/etc/nginx/conf.d/
+    - ./files:/data/files
+    - /etc/timezone:/etc/timezone:ro
+    - /etc/localtime:/etc/localtime:ro
